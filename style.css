@@ -112,6 +112,7 @@ header .open-menu {
         max-height: initial;
         overflow: initial;
         text-align: initial;
+        opacity: unset;
     }
 
     nav ul {
