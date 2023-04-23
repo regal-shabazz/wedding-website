@@ -158,6 +158,10 @@ nav.nav-open {
 }
 
 /* wedding */
+#wedding {
+    background-color: #000;
+}
+
 #wedding .container {
   display: grid;
   gap: 2rem;
@@ -181,6 +185,10 @@ nav.nav-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#wedding article {
+    color: #fff;
 }
 
 #wedding h3 {
