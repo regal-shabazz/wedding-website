@@ -42,7 +42,7 @@ header .container {
 
 header .logo {
     font-size: 2rem;
-    color: goldenrod;
+    color: #daa520;
 }
 
 nav {
@@ -74,6 +74,7 @@ nav ul {
 nav a {
     color: #fff;
     text-transform: uppercase;
+    transition: ease .4s;
 }
 
 header .open-menu {
@@ -119,5 +120,10 @@ header .open-menu {
         display: flex;
         align-items: center;
         padding: unset;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        color: #daa520;
     }
 }
