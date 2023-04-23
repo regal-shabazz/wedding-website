@@ -1,129 +1,140 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Cormorant Garamond', sans-serif;
+  font-family: "Cormorant Garamond", sans-serif;
 }
 
 .container {
-    width: 90%;
-    max-width: 1024px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 ul li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* header */
 header {
-    background-color: #000;
+  background-color: #000;
 }
 
 header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
 header .logo {
-    font-size: 2rem;
-    color: #daa520;
+  font-size: 2rem;
+  color: #daa520;
 }
 
 nav {
-    position: fixed;
-    top: 71px;
-    left: 0;
-    width: 100%;
-    display: grid;
-    place-content: center;
-    background-color: #000;
-    max-height: 0px;
-    overflow: hidden;
-    transition: ease .5s;
-    text-align: center; 
-    opacity: 0;
-}
-
-nav.nav-open {
-    max-height: 300px;
-    opacity: 1;
+  position: fixed;
+  top: 71px;
+  left: 0;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: #000;
+  max-height: 0px;
+  overflow: hidden;
+  transition: ease 0.5s;
+  text-align: center;
+  opacity: 0;
 }
 
 nav ul {
-    display: grid;
-    gap: 1.5rem;
-    padding: 2rem 0;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 0;
 }
 
 nav a {
-    color: #fff;
-    text-transform: uppercase;
-    transition: ease .4s;
-}
-
-header .open-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  transition: ease 0.4s;
 }
 
 #close-menu-icon {
-    display: none;
-    transition: ease .3s;
+  display: none;
+  transition: ease 0.3s;
+}
+
+header .open-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* for javascript */
+nav.nav-open {
+  max-height: 300px;
+  opacity: 1;
 }
 
 #close-menu-icon.display {
-    display: block;
+  display: block;
 }
 
 #open-menu-icon.no-display {
-    display: none;
+  display: none;
+}
+/* ***************** */
+/* header closed */
+
+/* homepage */
+
+#homepage {
+    background-image: url('./pexels-lombe-k-5198287.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-
-
 @media screen and (min-width: 768px) {
-    header .open-menu {
-        display: none;
-    }
+  header .open-menu {
+    display: none;
+  }
 
-    nav {
-        position: initial;
-        top: initial;
-        left: initial;
-        width: initial;
-        display: initial;
-        max-height: initial;
-        overflow: initial;
-        text-align: initial;
-        opacity: unset;
-    }
+  nav {
+    position: initial;
+    top: initial;
+    left: initial;
+    width: initial;
+    display: initial;
+    max-height: initial;
+    overflow: initial;
+    text-align: initial;
+    opacity: unset;
+  }
 
-    nav ul {
-        display: flex;
-        align-items: center;
-        padding: unset;
-    }
+  nav ul {
+    display: flex;
+    align-items: center;
+    padding: unset;
+  }
 
-    nav a:hover,
-    nav a:focus {
-        color: #daa520;
-    }
+  nav a:hover,
+  nav a:focus {
+    color: #daa520;
+  }
 }
