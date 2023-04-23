@@ -1,6 +1,7 @@
 const openMobileNav = document.getElementById('open-menu-icon')
 const closeMobileNav = document.getElementById('close-menu-icon')
 const mobileNav = document.querySelector('nav')
+const menuItems = document.querySelectorAll('.menuItem')
 
 openMobileNav.addEventListener("click", () => {
     mobileNav.classList.toggle('nav-open')
@@ -14,8 +15,16 @@ closeMobileNav.addEventListener("click", () => {
     closeMobileNav.classList.remove('display')
 })
 
+menuItems.forEach(menu => {
+    menu.addEventListener("click", () => {
+        mobileNav.classList.remove('nav-open')
+        closeMobileNav.classList.remove('display')
+        openMobileNav.classList.remove('no-display')
+    })
+})
+
 // Set the date to countdown to (YYYY-MM-DD)
-const countdownDate = new Date('2023-05-13').getTime();
+const countdownDate = new Date('2023-05-23').getTime();
 
 // Update the countdown timer every 1 second
 const countdownTimer = setInterval(() => {

@@ -1,70 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wedding</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/65803d9dcd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <span>J&J</span>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#homepage">home</a></li>
-                    <li><a href="#wedding">wedding</a></li>
-                    <li><a href="#rsvp">rsvp</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="open-menu">
-                <img src="./images/icon-hamburger.svg" alt="" id="open-menu-icon">
-                <img src="./images/icon-close.svg" alt="" id="close-menu-icon">
-            </div>
+      <div class="container">
+        <div class="logo">
+          <span>J&J</span>
         </div>
+
+        <nav>
+          <ul>
+            <li><a class="menuItem" href="#homepage">home</a></li>
+            <li><a class="menuItem" href="#wedding">wedding</a></li>
+            <li><a class="menuItem" href="#rsvp">rsvp</a></li>
+            <li><a class="menuItem" href="#contact">contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="open-menu">
+          <img src="./images/icon-hamburger.svg" alt="" id="open-menu-icon" />
+          <img src="./images/icon-close.svg" alt="" id="close-menu-icon" />
+        </div>
+      </div>
     </header>
     <!--  -->
 
     <main>
-        <section id="homepage">
-            <div class="container">
-                <article class="homepage-article">
-                    <h3>celebrate with</h3>
-                    <h1>jane <span>&amp;</span> john</h1>
-                    <p>in</p>
+      <section id="homepage">
+        <div class="container">
+          <article class="homepage-article">
+            <h3>celebrate with</h3>
+            <h1>jane <span>&amp;</span> john</h1>
+            <p>in</p>
 
-                    <div class="countdown">
-                        <span class="days-wrapper">
-                          <div id="days" class="time">00</div>
-                          <label for="days">Days</label>
-                        </span>
-            
-                        <span class="hrs-wrapper">
-                          <div id="hours" class="time">00</div>
-                          <label for="hours">Hours</label>
-                        </span>
-            
-                        <span class="min-wrapper">
-                          <div id="minutes" class="time">00</div>
-                          <label for="minutes">Mins</label>
-                        </span>
-            
-                        <span class="secs-wrapper">
-                          <div id="seconds" class="time">00</div>
-                          <label for="seconds">Secs</label>
-                        </span>
-                    </div>
-                </article>
+            <div class="countdown">
+              <span class="days-wrapper">
+                <div id="days" class="time">00</div>
+                <label for="days">Days</label>
+              </span>
+
+              <span class="hrs-wrapper">
+                <div id="hours" class="time">00</div>
+                <label for="hours">Hours</label>
+              </span>
+
+              <span class="min-wrapper">
+                <div id="minutes" class="time">00</div>
+                <label for="minutes">Mins</label>
+              </span>
+
+              <span class="secs-wrapper">
+                <div id="seconds" class="time">00</div>
+                <label for="seconds">Secs</label>
+              </span>
             </div>
-        </section>
+          </article>
+        </div>
+      </section>
+      <!--  -->
+      <!--  -->
+      <section id="wedding">
+        <div class="container">
+          <span class="wedding-detail date">
+            <div class="image">
+              <img src="https://www.photos-public-domain.com/wp-content/uploads/2011/02/may-calendar.jpg" alt="">
+            </div>
+            <article>
+                <h3>date and time</h3>
+                <p>23rd may, 2023</p>
+                <p>10am</p>
+            </article>
+          </span>
+          <span class="wedding-detail venue">
+            <div class="image">
+                <img src="./images/hannah-busing-URVe89DA5Cw-unsplash.jpg" alt="">
+            </div>
+            <article>
+                <h3>venue</h3>
+                <p>royal palace events centre</p>
+                <p>lekki, lagos</p>
+            </article>
+          </span>
+          <span class="wedding-detail color-code">
+            <div class="image">
+                <img src="https://i0.wp.com/koko.ng/wp-content/uploads/2017/06/KOKO-Weddings-Nigerian-Wedding-Fun-Facts-KOKOTV4-1.jpg?fit=600%2C400&ssl=1" alt="">
+            </div>
+            <article>
+                <h3>color-code</h3>
+                <p>bride: blush pink and ivory</p>
+                <p>groom: navy blue and gold</p>
+            </article>
+          </span>
+        </div>
+      </section>
+
+      <section id="rsvp">
+        <div class="container">
+
+        </div>
+      </section>
     </main>
 
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
