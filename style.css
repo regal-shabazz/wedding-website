@@ -103,11 +103,53 @@ nav.nav-open {
 /* homepage */
 
 #homepage {
-    background-image: url('./eugenivy_now-a0XDlgOF1uA-unsplash.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, .5)), url('./eugenivy_now-a0XDlgOF1uA-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - 71px);
+}
+
+.homepage-article {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.homepage-article h3 {
+    font-size: 2rem;
+    padding: 3rem 0 0;
+}
+
+.homepage-article h1 {
+    font-size: 5rem;
+    word-spacing: -20px;
+    color: #daa520;
+    margin-top: -1.7rem;
+}
+
+.homepage-article p {
+    font-size: 2rem;
+}
+
+.countdown > span {
+    display: flex;
+    gap: .5rem;
+}
+
+.countdown .days-wrapper {
+    font-size: 4rem;
+}
+
+.countdown .hrs-wrapper {
+    font-size: 3rem;
+}
+
+.countdown .min-wrapper {
+    font-size: 2rem;
+}
+
+.countdown .secs-wrapper {
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
