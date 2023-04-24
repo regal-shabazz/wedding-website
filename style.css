@@ -164,10 +164,11 @@ nav.nav-open {
 
 #wedding .container {
   display: grid;
-  gap: 2rem;
-  place-content: center;
+  gap: 10rem;
+  place-content: left;
   text-align: center;
-  padding: 3rem 0;
+  padding: 6rem 0;
+  height: 100vh;
 }
 
 #wedding .wedding-detail {
@@ -206,6 +207,10 @@ nav.nav-open {
 #rsvp {
   background-color: #000;
   color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.867), rgba(0, 0, 0, 0.915)), url('https://i.pinimg.com/originals/ea/a6/1e/eaa61e30a739e3b554f4de014de44382.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #rsvp .attendance-query {
@@ -214,7 +219,7 @@ nav.nav-open {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
 }
 
 .attendance-query h2 {
@@ -245,7 +250,7 @@ nav.nav-open {
   background-color: #000;
   color: #fff;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: .8rem;
   font-family: "Cormorant Garamond", sans-serif;
   cursor: pointer;
 }
@@ -255,7 +260,7 @@ nav.nav-open {
 }
 
 .query-response #no:hover {
-  background-color: #daa52033;
+  background-color: #daa520;
 }
 
 @media screen and (min-width: 768px) {
