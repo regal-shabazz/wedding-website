@@ -365,7 +365,41 @@ option {
   margin-bottom: 2rem;
 }
 
+.access-card button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: #daa520;
+  margin-top: 2rem;
+}
 
+
+.decline-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.62);
+  line-height: 1.6;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  display: none;
+}
+
+
+.decline-message button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: #daa520;
+  margin-top: 2rem;
+}
+
+.decline-message.show {
+  display: block;
+}
 
 
 @media screen and (min-width: 768px) {

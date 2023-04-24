@@ -70,6 +70,20 @@ acceptInvite.addEventListener("click", () => {
   attQuery.classList.toggle('n-display')
 })
 
+const declineInvite = document.getElementById('no')
+const declineMessage = document.querySelector('.decline-message')
+
+declineInvite.addEventListener("click", () => {
+  declineMessage.classList.toggle('show')
+  attQuery.classList.toggle('n-display')
+
+  const closeDeclineMessage = document.getElementById('close-decline')
+
+  closeDeclineMessage.addEventListener("click", () => {
+    declineMessage.classList.remove('show')
+    attQuery.classList.remove('n-display')
+  })
+})
 
 // Get DOM elements
 const imgBox = document.getElementById('imgBox');
@@ -105,7 +119,16 @@ getASeat.addEventListener('submit', (e) => {
 
     thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.`;
 
+    const closeImgBox = document.createElement('button')
+    closeImgBox.innerText = "Close"
+
     accessCard.appendChild(thankYouMessage);
+    accessCard.appendChild(closeImgBox);
+
+    closeImgBox.addEventListener("click", () => {
+      accessCard.classList.remove('generated')
+      attQuery.classList.remove('n-display')
+    })
   }
 });
 
