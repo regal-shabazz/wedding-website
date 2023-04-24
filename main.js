@@ -107,6 +107,7 @@ getASeat.addEventListener('submit', (e) => {
   // Generate QR code URL with data from input fields
   const qrData = encodeURIComponent(`Name: ${firstName.value} ${lastName.value}\nSide of Family: ${sideOfFamily.value}`);
 
+  qrImage.src = ""
   qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrData;
 
   const accessCard = document.querySelector('.access-card');
@@ -115,9 +116,19 @@ getASeat.addEventListener('submit', (e) => {
   if (accessCard.classList.contains('generated')) {
     rsvpForm.classList.remove('pop-out')
 
+    // Remove previous thankYouMessage and note elements
+    accessCard.querySelector('p').remove();
+    accessCard.querySelector('p').remove();
+
+    // Create and append new thankYouMessage and note elements
     const thankYouMessage = document.createElement('p');
     const note = document.createElement('p');
-    
+    // ... rest of the code to set innerText and appendChild for thankYouMessage and note
+
+
+    const thankYouMessage = document.createElement('p');
+    const note = document.createElement('p');
+
     thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.`;
 
     note.innerText = `Note: Due to poor internet connection, your QR code may take a moment to load. Please refresh the page or wait a moment for it to display.`
@@ -133,7 +144,9 @@ getASeat.addEventListener('submit', (e) => {
     closeImgBox.addEventListener("click", () => {
       accessCard.classList.remove('generated')
       attQuery.classList.remove('n-display')
+      return;
     })
+    return;
   }
 });
 
