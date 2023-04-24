@@ -125,7 +125,7 @@ getASeat.addEventListener('submit', (e) => {
     const note = document.createElement('p');
 
 
-    thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.`;
+    thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.\n\nYou can also scan it yourself to see the venue seating chart.`;
 
     note.innerText = `Note: Due to poor internet connection, your QR code may take a moment to load. Please refresh the page or wait a moment for it to display.`
 
@@ -140,10 +140,9 @@ getASeat.addEventListener('submit', (e) => {
     closeImgBox.addEventListener("click", () => {
       accessCard.classList.remove('generated')
       attQuery.classList.remove('n-display')
+      window.location.reload()
 
     })
-
-
   }
 
 });
