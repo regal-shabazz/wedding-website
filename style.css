@@ -202,7 +202,61 @@ nav.nav-open {
     font-size: 1.5rem;
 }
 
+/* rsvp */
+#rsvp {
+  background-color: #000;
+  color: #fff;
+}
 
+#rsvp .attendance-query {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.attendance-query h2 {
+  font-size: 4rem;
+}
+
+#will-you {
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+#will-you p {
+  font-size: 1.5rem;
+  color: #daa520;
+}
+
+.query-response {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.query-response button {
+  padding: .5rem 1.5rem;
+  border: 1px solid #daa520;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", sans-serif;
+  cursor: pointer;
+}
+
+.query-response #yes:hover {
+  background-color: #daa520;
+}
+
+.query-response #no:hover {
+  background-color: #daa52033;
+}
 
 @media screen and (min-width: 768px) {
   header .open-menu {
