@@ -126,8 +126,8 @@ getASeat.addEventListener('submit', (e) => {
     // ... rest of the code to set innerText and appendChild for thankYouMessage and note
 
 
-    const thankYouMessage = document.createElement('p');
-    const note = document.createElement('p');
+    // const thankYouMessage = document.createElement('p');
+    // const note = document.createElement('p');
 
     thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.`;
 
