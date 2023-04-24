@@ -116,14 +116,19 @@ getASeat.addEventListener('submit', (e) => {
     rsvpForm.classList.remove('pop-out')
 
     const thankYouMessage = document.createElement('p');
-
+    const note = document.createElement('p');
+    
     thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.`;
+
+    note.innerText = `Note: Due to poor internet connection, your QR code may take a moment to load. Please refresh the page or wait a moment for it to display.`
 
     const closeImgBox = document.createElement('button')
     closeImgBox.innerText = "Close"
 
     accessCard.appendChild(thankYouMessage);
+    accessCard.appendChild(note);
     accessCard.appendChild(closeImgBox);
+
 
     closeImgBox.addEventListener("click", () => {
       accessCard.classList.remove('generated')

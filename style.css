@@ -367,6 +367,11 @@ option {
   margin-bottom: 2rem;
 }
 
+.access-card p:nth-child(3) {
+  margin-top: 2rem;
+  font-size: .8rem;
+  color: rgb(244, 116, 116);
+}
 .access-card button {
   padding: 0.5rem 1.5rem;
   border: none;
