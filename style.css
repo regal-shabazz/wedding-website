@@ -351,6 +351,8 @@ option {
   color: #fff;
   word-spacing: 5px;
   text-align: center;
+  width: 90%;
+  max-width: 1024px;
 }
 
 .access-card.generated {
