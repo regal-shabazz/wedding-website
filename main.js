@@ -4,23 +4,23 @@ const mobileNav = document.querySelector('nav')
 const menuItems = document.querySelectorAll('.menuItem')
 
 openMobileNav.addEventListener("click", () => {
-    mobileNav.classList.toggle('nav-open')
-    closeMobileNav.classList.toggle('display')
-    openMobileNav.classList.toggle('no-display')
+  mobileNav.classList.toggle('nav-open')
+  closeMobileNav.classList.toggle('display')
+  openMobileNav.classList.toggle('no-display')
 })
 
 closeMobileNav.addEventListener("click", () => {
-    mobileNav.classList.remove('nav-open')
-    openMobileNav.classList.remove('no-display')
-    closeMobileNav.classList.remove('display')
+  mobileNav.classList.remove('nav-open')
+  openMobileNav.classList.remove('no-display')
+  closeMobileNav.classList.remove('display')
 })
 
 menuItems.forEach(menu => {
-    menu.addEventListener("click", () => {
-        mobileNav.classList.remove('nav-open')
-        closeMobileNav.classList.remove('display')
-        openMobileNav.classList.remove('no-display')
-    })
+  menu.addEventListener("click", () => {
+    mobileNav.classList.remove('nav-open')
+    closeMobileNav.classList.remove('display')
+    openMobileNav.classList.remove('no-display')
+  })
 })
 
 // Set the date to countdown to (YYYY-MM-DD)
@@ -57,3 +57,55 @@ const countdownTimer = setInterval(() => {
     alert('Countdown is over!');
   }
 }, 1000);
+
+
+// rsvp
+
+const acceptInvite = document.getElementById('yes')
+const rsvpForm = document.querySelector('.seat-reservation')
+const attQuery = document.querySelector('.attendance-query')
+
+acceptInvite.addEventListener("click", () => {
+  rsvpForm.classList.toggle('pop-out');
+  attQuery.classList.toggle('n-display')
+})
+
+
+// Get DOM elements
+const imgBox = document.getElementById('imgBox');
+const qrImage = document.getElementById('qrImage')
+const firstName = document.getElementById('first-name')
+const lastName = document.getElementById('last-name')
+const sideOfFamily = document.getElementById('sideOfFamily')
+const getASeat = document.getElementById('seat-form')
+
+// Add event listener to the form element
+getASeat.addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent form submission
+
+  // Check if first name, last name, and side of family are filled
+  if (firstName.value.trim() === "" || lastName.value.trim() === "" || sideOfFamily.value.trim() === "") {
+    // Display an alert if any of the input fields are not filled
+    alert('Please fill in all the required fields');
+    return;
+  }
+
+  // Generate QR code URL with data from input fields
+  const qrData = encodeURIComponent(`Name: ${firstName.value} ${lastName.value}\nSide of Family: ${sideOfFamily.value}`);
+
+  qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrData;
+
+  const accessCard = document.querySelector('.access-card');
+
+  accessCard.classList.toggle('generated');
+  if (accessCard.classList.contains('generated')) {
+    rsvpForm.classList.remove('pop-out')
+
+    const thankYouMessage = document.createElement('p');
+
+    thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.`;
+
+    accessCard.appendChild(thankYouMessage);
+  }
+});
+
