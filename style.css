@@ -602,10 +602,10 @@ footer p {
   }
 
   #homepage {
-    padding-top: 2rem;
+    padding-top: 8rem;
     background-image:  linear-gradient(rgba(0, 0, 0, 0.805), rgba(0, 0, 0, 0)), url('./images/akuoma2-2.jpg');
     background-size: cover;
-    background-position-y: 130%;
+    background-position-y: 100%;
     background-color: #fff;
   }
 
