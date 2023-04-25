@@ -103,11 +103,18 @@ getASeat.addEventListener('submit', (e) => {
     // Display an alert if any of the input fields are not filled
     alert('Please fill in all the required fields');
     return;
+  } 
+
+  if (/^[a-zA-Z]+$/.test(firstName.value.trim()) || /^[a-zA-Z]+$/.test(lastName.value.trim())) {
+    console.log(`success`);
+  } else {
+    alert(`Please enter valid name`)
+    return
   }
 
 
   // Generate QR code URL with data from input fields
-  const qrData = encodeURIComponent(`Name: ${firstName.value} ${lastName.value}\nSide of Family: ${sideOfFamily.value}`);
+  const qrData = encodeURIComponent(`\n\n\nName: ${firstName.value} ${lastName.value}\n\nSide of Family: ${sideOfFamily.value}\n\n\nThis is a verified pass. The holder can be granted entrance into the venue and ushered kindly to the ${sideOfFamily.value} seating area.`);
 
   qrImage.src = ""
   qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrData;
@@ -145,10 +152,6 @@ getASeat.addEventListener('submit', (e) => {
 
     })
   }
-
-
-
-
 });
 
 
