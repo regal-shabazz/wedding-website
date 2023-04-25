@@ -1,12 +1,4 @@
 
-
-
-
-  
-
-
-
-
 const openMobileNav = document.getElementById('open-menu-icon')
 const closeMobileNav = document.getElementById('close-menu-icon')
 const mobileNav = document.querySelector('nav')
@@ -153,4 +145,23 @@ getASeat.addEventListener('submit', (e) => {
 
     })
   }
+
+
+
+
 });
+
+
+
+  const seatChartBtn = document.getElementById('seatchart')
+  const seatChart = document.querySelector('.seat-chart') 
+
+  seatChartBtn.addEventListener("click", () => {
+    seatChart.classList.toggle('pop')
+
+    const closeSeatChart =  document.getElementById('closeseatchart')
+
+    closeSeatChart.addEventListener("click", () => {
+      seatChart.classList.remove('pop')
+    })
+  })

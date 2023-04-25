@@ -466,7 +466,9 @@ option {
   font-size: 0.8rem;
   color: rgb(244, 116, 116);
 }
-.access-card button {
+
+.access-card button,
+#closeseatchart {
   padding: 0.5rem 1.5rem;
   border: none;
   background-color: #e278e2;
@@ -500,16 +502,37 @@ option {
   display: block;
 }
 
-/* seat chart */
-#seat-chart .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.seat-chart {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  width: 100%;
+  max-width: 1024px;
+  transition: ease .5s;
+  opacity: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+#closeseatchart {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.seat-chart.pop {
+  display: block;
+  opacity: 1;
+}
+
+#chart {
   text-align: center;
 }
 
-#seat-chart img {
+.seat-chart img {
   width: 100%;
 }
 
