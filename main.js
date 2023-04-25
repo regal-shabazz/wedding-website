@@ -33,7 +33,7 @@ menuItems.forEach(menu => {
 })
 
 // Set the date to countdown to (YYYY-MM-DD)
-const countdownDate = new Date('2023-05-23').getTime();
+const countdownDate = new Date('2023-05-06').getTime();
 
 // Update the countdown timer every 1 second
 const countdownTimer = setInterval(() => {
