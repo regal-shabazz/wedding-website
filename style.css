@@ -439,6 +439,7 @@ option {
 #get-a-seat {
   border: none;
   background-color: #e278e2;
+  cursor: pointer;
 }
 
 #seat-form a {
@@ -489,6 +490,7 @@ option {
   border: none;
   background-color: #e278e2;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .decline-message {
@@ -512,10 +514,15 @@ option {
   border: none;
   background-color: #e278e2;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .decline-message.show {
   display: block;
+}
+
+#seatchart {
+  cursor: pointer;
 }
 
 .seat-chart {
