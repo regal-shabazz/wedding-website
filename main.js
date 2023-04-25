@@ -153,5 +153,4 @@ getASeat.addEventListener('submit', (e) => {
 
     })
   }
-
 });
