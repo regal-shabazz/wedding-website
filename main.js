@@ -1,28 +1,28 @@
 
-const openMobileNav = document.getElementById('open-menu-icon')
-const closeMobileNav = document.getElementById('close-menu-icon')
-const mobileNav = document.querySelector('nav')
-const menuItems = document.querySelectorAll('.menuItem')
+// const openMobileNav = document.getElementById('open-menu-icon')
+// const closeMobileNav = document.getElementById('close-menu-icon')
+// const mobileNav = document.querySelector('nav')
+// const menuItems = document.querySelectorAll('.menuItem')
 
-openMobileNav.addEventListener("click", () => {
-  mobileNav.classList.toggle('nav-open')
-  closeMobileNav.classList.toggle('display')
-  openMobileNav.classList.toggle('no-display')
-})
+// openMobileNav.addEventListener("click", () => {
+//   mobileNav.classList.toggle('nav-open')
+//   closeMobileNav.classList.toggle('display')
+//   openMobileNav.classList.toggle('no-display')
+// })
 
-closeMobileNav.addEventListener("click", () => {
-  mobileNav.classList.remove('nav-open')
-  openMobileNav.classList.remove('no-display')
-  closeMobileNav.classList.remove('display')
-})
+// closeMobileNav.addEventListener("click", () => {
+//   mobileNav.classList.remove('nav-open')
+//   openMobileNav.classList.remove('no-display')
+//   closeMobileNav.classList.remove('display')
+// })
 
-menuItems.forEach(menu => {
-  menu.addEventListener("click", () => {
-    mobileNav.classList.remove('nav-open')
-    closeMobileNav.classList.remove('display')
-    openMobileNav.classList.remove('no-display')
-  })
-})
+// menuItems.forEach(menu => {
+//   menu.addEventListener("click", () => {
+//     mobileNav.classList.remove('nav-open')
+//     closeMobileNav.classList.remove('display')
+//     openMobileNav.classList.remove('no-display')
+//   })
+// })
 
 // Set the date to countdown to (YYYY-MM-DD)
 const countdownDate = new Date('2023-05-06').getTime();
@@ -60,16 +60,29 @@ const countdownTimer = setInterval(() => {
 }, 1000);
 
 
-// rsvp
 
+
+
+
+const homeArticle = document.querySelector('.homepage-article')
+const closeForm = document.getElementById('close-form')
 const acceptInvite = document.getElementById('yes')
 const rsvpForm = document.querySelector('.seat-reservation')
 const attQuery = document.querySelector('.attendance-query')
 
 acceptInvite.addEventListener("click", () => {
   rsvpForm.classList.toggle('pop-out');
-  attQuery.classList.toggle('n-display')
+  attQuery.classList.toggle('n-display');
+  homeArticle.classList.toggle('none')
+
+  closeForm.addEventListener("click", () => {
+    rsvpForm.classList.remove('pop-out')
+    homeArticle.classList.remove('none')
+    attQuery.classList.remove('n-display')
+  })
 })
+
+
 
 const declineInvite = document.getElementById('no')
 const declineMessage = document.querySelector('.decline-message')
@@ -77,12 +90,14 @@ const declineMessage = document.querySelector('.decline-message')
 declineInvite.addEventListener("click", () => {
   declineMessage.classList.toggle('show')
   attQuery.classList.toggle('n-display')
+  homeArticle.classList.toggle('none')
 
   const closeDeclineMessage = document.getElementById('close-decline')
 
   closeDeclineMessage.addEventListener("click", () => {
     declineMessage.classList.remove('show')
     attQuery.classList.remove('n-display')
+    homeArticle.classList.remove('none')
   })
 })
 
