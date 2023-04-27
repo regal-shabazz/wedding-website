@@ -159,7 +159,7 @@ getASeat.addEventListener('submit', (e) => {
 
   // Create email parameters
   const params = {
-    from_name: 'AkukoIfunanya',
+    from_name: `AkukoIfunanya's Guest List`,
     to_name: `${firstName} ${lastName}`,
     to_email: 'akuomaukonna@gmail.com',
     message: `${firstName.value} ${lastName.value}\n\nSide of Family: ${sideOfFamily.value}`,
