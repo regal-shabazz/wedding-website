@@ -10,6 +10,8 @@
       src="https://kit.fontawesome.com/65803d9dcd.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
   </head>
   <body>
     <div class="splash-screen">
@@ -25,7 +27,7 @@
         <nav>
           <ul>
             <li><a class="menuItem" href="#homepage">home</a></li>
-            <li><a class="menuItem" href="#wedding">wedding</a></li>
+            <!-- <li><a class="menuItem" href="#wedding">wedding</a></li> -->
             <li><a class="menuItem" href="#rsvp">rsvp</a></li>
             <li><a class="menuItem" href="#thanks">Thanks</a></li>
           </ul>
@@ -73,7 +75,7 @@
       </section>
       <!--  -->
       <!--  -->
-      <section id="wedding">
+      <!-- <section id="wedding">
         <div class="container">
           <span class="wedding-detail">
             <article>
@@ -129,7 +131,7 @@
             </article>
           </span>
         </div>
-      </section>
+      </section> -->
 
       <section id="rsvp">
         <div class="container">
@@ -151,15 +153,18 @@
               <input
                 type="text"
                 class="name"
+                name="first-name"
                 id="first-name"
                 placeholder="First-Name"
               />
               <input
                 type="text"
                 class="name"
+                name="last-name"
                 placeholder="Last-Name"
                 id="last-name"
               />
+              
               <label for="sideOfFamily" class="side">Side of Family:</label>
               <select id="sideOfFamily" name="sideOfFamily">
                 <!-- Change to a select element for side of family input -->

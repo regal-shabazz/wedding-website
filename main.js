@@ -94,12 +94,13 @@ const lastName = document.getElementById('last-name')
 const sideOfFamily = document.getElementById('sideOfFamily')
 const getASeat = document.getElementById('seat-form')
 
+
 // Add event listener to the form element
 getASeat.addEventListener('submit', (e) => {
   e.preventDefault(); // Prevent form submission
 
   // Check if first name, last name, and side of family are filled
-  if (firstName.value.trim() === "" || lastName.value.trim() === "" || sideOfFamily.value.trim() === "") {
+  if (firstName.value.trim() === "" || lastName.value.trim() === "" || sideOfFamily.value.trim() === "" ) {
     // Display an alert if any of the input fields are not filled
     alert('Please fill in all the required fields');
     return;
@@ -127,6 +128,8 @@ getASeat.addEventListener('submit', (e) => {
   if (accessCard.classList.contains('generated')) {
     rsvpForm.classList.remove('pop-out')
 
+   
+
 
     // Create and append new thankYouMessage and note elements
     const thankYouMessage = document.createElement('p');
@@ -152,6 +155,27 @@ getASeat.addEventListener('submit', (e) => {
 
     })
   }
+
+
+  // Create email parameters
+  const params = {
+    from_name: 'AkukoIfunanya',
+    to_name: `${firstName} ${lastName}`,
+    to_email: 'akuomaukonna@gmail.com',
+    message: `${firstName.value} ${lastName.value}\n\nSide of Family: ${sideOfFamily.value}`,
+  };
+
+  // Send email using EmailJS
+  emailjs.send('service_g42dyil', 'template_tgu7bfp', params, 'wFU1OSwcA04vIjE6F')
+    .then((response) => {
+      console.log('Email sent!', response.status, response.text);
+    }, (error) => {
+      console.error('Error sending email:', error);
+    });
+
+  // Show success message
+  // const successMessage = `Thank you ${firstName} ${lastName}, for accepting the RSVP invitation. Please take a screenshot of the QR code and present it at the venue entrance for entry.`;
+  // alert(successMessage);
 });
 
 
