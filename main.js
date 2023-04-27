@@ -1,28 +1,5 @@
 
-// const openMobileNav = document.getElementById('open-menu-icon')
-// const closeMobileNav = document.getElementById('close-menu-icon')
-// const mobileNav = document.querySelector('nav')
-// const menuItems = document.querySelectorAll('.menuItem')
 
-// openMobileNav.addEventListener("click", () => {
-//   mobileNav.classList.toggle('nav-open')
-//   closeMobileNav.classList.toggle('display')
-//   openMobileNav.classList.toggle('no-display')
-// })
-
-// closeMobileNav.addEventListener("click", () => {
-//   mobileNav.classList.remove('nav-open')
-//   openMobileNav.classList.remove('no-display')
-//   closeMobileNav.classList.remove('display')
-// })
-
-// menuItems.forEach(menu => {
-//   menu.addEventListener("click", () => {
-//     mobileNav.classList.remove('nav-open')
-//     closeMobileNav.classList.remove('display')
-//     openMobileNav.classList.remove('no-display')
-//   })
-// })
 
 // Set the date to countdown to (YYYY-MM-DD)
 const countdownDate = new Date('2023-05-06').getTime();
@@ -187,10 +164,6 @@ getASeat.addEventListener('submit', (e) => {
     }, (error) => {
       console.error('Error sending email:', error);
     });
-
-  // Show success message
-  // const successMessage = `Thank you ${firstName} ${lastName}, for accepting the RSVP invitation. Please take a screenshot of the QR code and present it at the venue entrance for entry.`;
-  // alert(successMessage);
 });
 
 
