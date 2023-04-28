@@ -128,7 +128,7 @@ getASeat.addEventListener('submit', (e) => {
     const note = document.createElement('p');
 
 
-    thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.\n\nVenue: HOUSE ON THE ROCK THE ROCK CATHEDRAL LEKKI, LAGOS\nTime: 10am`;
+    thankYouMessage.innerText = `Thank you ${firstName.value} ${lastName.value}, for accepting the RSVP invitation.\n\nPlease take a screenshot of this QR code and present it at the venue entrance for entry.\n\nVenue: The FIVE PALM ONIRU, Remi Olowude Street, Oniru, Lagos.\nTime: 3pm`;
 
     note.innerText = `Note: Due to poor internet connection, your QR code may take a moment to load. Please refresh the page or wait a moment for it to display.`
 
